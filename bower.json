@@ -1,0 +1,26 @@
+{
+  "name": "coffeedev",
+  "description": "Page Official of Coffee Dev",
+  "main": "dist/index.js",
+  "authors": [
+    "Nicolas Valeria Burgos <nicolas.valeria@coffeedev.cl>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "CoffeeDev",
+    "Software",
+    "Development"
+  ],
+  "homepage": "https://github.com/CoffeeDev-Project/template_coffeedev",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.7"
+  }
+}

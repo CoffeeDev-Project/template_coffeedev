@@ -1,0 +1,42 @@
+{
+  "name": "coffeedev",
+  "version": "1.0.0",
+  "description": "Page Official of Coffee Dev",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoffeeDev-Project/template_coffeedev.git"
+  },
+  "keywords": [
+    "CoffeeDev",
+    "Software",
+    "Development"
+  ],
+  "author": "Nicolas Valeria Burgos <nicolas.valeria@coffeedev.cl>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CoffeeDev-Project/template_coffeedev/issues"
+  },
+  "homepage": "https://github.com/CoffeeDev-Project/template_coffeedev#readme",
+  "devDependencies": {
+    "browser-sync": "^2.15.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2",
+    "install": "^0.8.1",
+    "jshint": "^2.9.3",
+    "npm": "^3.10.6"
+  }
+}
