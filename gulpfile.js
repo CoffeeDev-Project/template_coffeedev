@@ -13,7 +13,6 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var htmlmin = require('gulp-htmlmin');
-var useref = require('gulp-useref');
 
 var browserSync = require('browser-sync').create();
 
@@ -44,7 +43,7 @@ gulp.task('lint', function () {
 gulp.task('sass', function () {
     return gulp.src([
         'src/assets/scss/*.scss',
-        'src/assets/scss/*.css',
+        'src/assets/css/*.css',
         bowerDirectory('materialize/dist/css/materialize.min.css')
     ]).pipe(sass())
         .pipe(cssnano())
@@ -66,7 +65,6 @@ gulp.task('sass', function () {
 gulp.task('scripts', function () {
     return gulp.src([
         bowerDirectory('jquery/dist/jquery.min.js'),
-        bowerDirectory('angular/angular.min.js'),
         'src/assets/js/*.js',
     ]).pipe(concat('javascript.min.js'))
         .pipe(uglify())
@@ -99,7 +97,7 @@ gulp.task('minify', function () {
  */
 gulp.task('watch', ['browserSync', 'sass', 'lint', 'scripts', 'minify'], function () {
     gulp.watch('src/assets/js/*.js', ['lint', 'scripts']);
-    gulp.watch(['src/assets/css/*.css', 'src/assets/sass/*.sass', 'src/assets/scss/*.scss'], ['sass']);
+    gulp.watch(['src/assets/css/*.css', 'src/assets/scss/*.scss'], ['sass']);
     gulp.watch('src/*.html', ['minify']);
 });
 
@@ -113,13 +111,6 @@ gulp.task('browserSync', function () {
             baseDir: 'dist'
         },
     })
-});
-
-gulp.task('useref', function () {
-    return gulp.src('app/*.html')
-        .pipe(useref())
-        .pipe(gulp.dest('dist'))
-        .pipe(notify("Ha finalizado la task css!"));
 });
 
 /*
