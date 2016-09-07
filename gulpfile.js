@@ -17,6 +17,9 @@ var htmlmin = require('gulp-htmlmin');
 var browserSync = require('browser-sync').create();
 
 var notify = require('gulp-notify');
+
+var fontmin = require('gulp-fontmin');
+
 var bowerDirectory = function (filejs) {
     return "bower_components/" + filejs;
 };
@@ -86,6 +89,16 @@ gulp.task('minify', function () {
         .pipe(browserSync.reload({
             stream: true
         })).pipe(notify("Ha finalizado la task html!"));
+});
+
+/*
+Minify Font
+Minifica el fuente en la carpeta font y la deja en dist/font
+*/
+gulp.task('minifyFont', function () {
+    return gulp.src('src/fonts/*.ttf')
+        .pipe(fontmin())
+        .pipe(gulp.dest('dist/fonts'));
 });
 
 /*
