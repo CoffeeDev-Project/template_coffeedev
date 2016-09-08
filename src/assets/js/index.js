@@ -1,1 +1,3 @@
-window.alert('El mane la chupa colgando');
+$(document).ready(function(){
+  $(".button-collapse").sideNav();
+});
