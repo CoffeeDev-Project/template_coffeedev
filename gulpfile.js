@@ -31,7 +31,9 @@ var bowerDirectory = function (filejs) {
  y se asegura de que no haya errores en nuestro código.
  */
 gulp.task('lint', function () {
-    return gulp.src('src/assets/js/**/*.js')
+    return gulp.src([
+        bowerDirectory('jquery/dist/jquery.min.js'),
+        'src/assets/js/**/*.js'])
         .pipe(concat('todo.js'))
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
@@ -68,6 +70,7 @@ gulp.task('sass', function () {
 gulp.task('scripts', function () {
     return gulp.src([
         bowerDirectory('jquery/dist/jquery.min.js'),
+        bowerDirectory('materialize/dist/js/materialize.min.js'),
         'src/assets/js/*.js',
     ]).pipe(concat('javascript.min.js'))
         .pipe(uglify())
