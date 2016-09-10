@@ -47,9 +47,9 @@ gulp.task('lint', function () {
  */
 gulp.task('sass', function () {
     return gulp.src([
+        bowerDirectory('materialize/dist/css/materialize.min.css'),
         'src/assets/scss/*.scss',
         'src/assets/css/*.css',
-        bowerDirectory('materialize/dist/css/materialize.min.css')
     ]).pipe(sass())
         .pipe(cssnano())
         .pipe(concatCss('style.min.css'))
