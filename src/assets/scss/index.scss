@@ -1,0 +1,97 @@
+$coffee_dev: #4BBBC4;
+$coffee_dev_black: #1DC0CC;
+$coffee_dev_white: #A8D8DC;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  color: #9E9D9C;
+}
+
+
+.navbar-fixed li a{
+  color: #000;
+}
+
+.cover {
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #eeeeee;
+  margin-bottom: 0px !important;
+  padding: 0px 0px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  overflow: hidden;
+  position: initial;
+  min-height: 100%;
+}
+
+.cover .cover-image {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url("http://lorempixel.com/1000/1000");
+}
+
+#image-principal{
+  width:100%;
+}
+
+.container-logo{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+}
+
+.container-fluid{
+  margin: 0 auto;
+  width:85%!important;
+}
+
+
+.font_coffeedev.font_black{
+  color: $coffee_dev_black;
+}
+
+.font_coffeedev{
+  color: $coffee_dev;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1{
+  font-size: 3.5rem!important;
+  margin: 0px!important;
+  margin-bottom: 10px;
+}
+
+h5{
+  font-size: 1.5rem!important;
+  margin: 0px!important;
+}
+
