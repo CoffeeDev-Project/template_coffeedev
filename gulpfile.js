@@ -53,7 +53,7 @@ gulp.task('sass', function () {
     ]).pipe(sass())
         .pipe(cssnano())
         .pipe(concatCss('style.min.css'))
-        .pipe(minifyCSS({keepBreaks: false}))
+        .pipe(minifyCSS())
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.reload({
             stream: true
@@ -99,7 +99,10 @@ Minify Font
 Minifica el fuente en la carpeta font y la deja en dist/font
 */
 gulp.task('minifyFont', function () {
-    return gulp.src('src/fonts/*.ttf')
+    return gulp.src([
+        'src/fonts/**',
+        bowerDirectory('materialize/dist/fonts/**'),
+        ])
         .pipe(fontmin())
         .pipe(gulp.dest('dist/fonts'));
 });
@@ -134,4 +137,4 @@ gulp.task('browserSync', function () {
  Finalmente, tenemos nuestro tarea por defecto que se utiliza como una referencia agrupados a las otras tareas.
  Esta será la tarea que se corrió al entrar de golpe en la línea de comando sin ningún parámetro adicional.
  */
-gulp.task('default', ['lint', 'sass', 'scripts', 'minify', 'watch']);
+gulp.task('default', ['minifyFont','lint', 'sass', 'scripts', 'minify', 'watch']);
